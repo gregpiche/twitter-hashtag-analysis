@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://kit.fontawesome.com/74b4483366.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='js/index.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Tweet Sentiments</title>
+</head>
+<body>
+    <div>
+        <p id="title">Enter a Twitter hashtag to discover how people are feeling with a certain topic.</p>
+    </div>
+    <form>
+        <div id="container">
+            <div id="input-icons">
+                <i class="fa-solid fa-magnifying-glass icon"></i>
+                <input id="hashtag" type="text" class="input-field" placeholder="Enter Hashtag">
+            </div>
+        </div>
+    </form>
+    <div id="chartContainer">
+        <canvas id="emotionsChart" style="width:100%;max-width:700px"></canvas>
+    </div>
+</body>
+</html>

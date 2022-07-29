@@ -20,8 +20,3 @@ def analyze(text):
         features=Features(emotion=EmotionOptions(document=True))).get_result()
     
     return response
-
-# text = "<html><head><title>Fruits</title></head><body><h1>Apples and Oranges</h1><p>I love apples! I don't like oranges.</p></body></html>"
-# response = analyze(text)
-# print(json.dumps(response, indent=2))
-# print(response["emotion"])

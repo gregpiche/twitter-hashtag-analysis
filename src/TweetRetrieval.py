@@ -125,3 +125,22 @@ def get_input():
 		print('Scraping has completed!')
 
 		return df
+
+def get_tweets(hashtag, date_since):
+	# Enter your own credentials obtained
+	# from your developer account
+	consumer_key = os.getenv('TWITTER_CONSUMER_KEY')
+	consumer_secret = os.getenv('TWITTER_CONSUMER_SECRET')
+	access_key = os.getenv('TWITTER_ACCESS_KEY')
+	access_secret = os.getenv('TWITTER_ACCESS_SECRET')
+
+	auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+	auth.set_access_token(access_key, access_secret)
+	api = tweepy.API(auth)
+
+	# number of tweets you want to extract in one run
+	numtweet = 100
+	df = scrape(hashtag, date_since, numtweet, api)
+	print('Scraping has completed!')
+
+	return df

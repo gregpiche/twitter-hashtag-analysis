@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("fonts/Inter Web/Inter-Light.woff2?v=3.19") format("woff2"),
+         url("fonts/Inter Web/Inter-Light.woff?v=3.19") format("woff");
+}
+
+#title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+    padding: 20px;
+    color: #000000;
+}
+
+#hashtag {
+    box-sizing: border-box;
+    
+    width: 100%;
+
+    /* M3/sys/light/outline */
+
+    border: 1px solid #79747E;
+    border-radius: 12px;
+} 
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#input-icons i {
+    position: absolute;
+
+}
+
+#input-icons {
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.icon {
+    padding: 10px;
+    min-width: 40px;
+
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+#chartContainer {
+    display: flex;
+    justify-content: center;
+
+}
